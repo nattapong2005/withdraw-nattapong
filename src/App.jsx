@@ -32,7 +32,7 @@ const App = () => {
   };
 
   const button = (amount) => {
-    setWithdrawAmount(amount + withdrawAmount);
+    setWithdrawAmount((prevAmount) => (prevAmount ? (parseInt(prevAmount) + amount).toString() : amount.toString()));
   };
 
 
